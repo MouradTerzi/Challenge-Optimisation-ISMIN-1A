@@ -162,6 +162,7 @@ def appeler_checker(tmp_path,resultat):
         [settings.CHECKER_PATH, tmp_path],
         capture_output=True,
         text=True,
+        encoding='latin-1',
         cwd=os.path.dirname(settings.CHECKER_PATH)
     )
     message = verification.stdout.strip()
