@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/classement.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!--link rel="stylesheet" href="{% static 'css/classement.css' %}"-->
+
+<div class="row">
+
+    <!-- Sidebar -->
+    <div class="col s12 m3">
+        <ul class="collection with-header z-depth-1">
+            <li class="collection-header"><h6>Instances</h6></li>
+
+            <li class="collection-item {% if not instance_active %}active{% endif %}">
+                <a href="{% url 'classement' %}" style="color: inherit;">
+                    Classement global
+                </a>
+            </li>
+
+            {% for inst in instances %}
+                <li class="collection-item {% if instance_active and inst.id == instance_active.id %}active{% endif %}">
+                    <a href="{% url 'classement_instance' inst.id %}" style="color: inherit;">
+                        {{ inst.nom }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Classement -->
+    <div class="col s12 m9">
+        <div class="card">
+            <div class="card-content">
+
+                {% if instance_active %}
+                    <h5 class="blue-text text-darken-2">
+                        <i class="material-icons left">leaderboard</i>
+                        Classement - {{ instance_active.nom }}
+                    </h5>
+
+                    <table class="highlight centered classement-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Équipe</th>
+                                <th class="separator">|</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for sol in solutions %}
+                                <tr class="
+                                    {% if sol.equipe.nom == nom_reference %}line-reference
+                                    {% elif sol.rank == 1 %}first-place
+                                    {% elif sol.rank == 2 %}second-place
+                                    {% elif sol.rank == 3 %}third-place
+                                    {% endif %}
+                                ">
+                                    <td>
+                                        {% if sol.is_reference %}
+                                            Réf.
+                                        {% elif sol.rank == 1 %}🥇
+                                        {% elif sol.rank == 2 %}🥈
+                                        {% elif sol.rank == 3 %}🥉
+                                        {% else %}{{ sol.rank }}
+                                        {% endif %}
+                                    </td>
+                                    <td>{{ sol.equipe.nom }}</td>
+                                    <td class="separator">|</td>
+                                    <td><strong>{{ sol.score }}</strong></td>
+                                </tr>
+                                {% empty %}
+                                <tr>
+                                    <td colspan="4">Aucune soumission</td>
+                                </tr>
+                                {% endfor %}
+                        </tbody>
+                    </table>
+
+                {% else %}
+                    <h5 class="blue-text text-darken-2">
+                        <i class="material-icons left">public</i>
+                        Classement général
+                    </h5>
+
+                    <table class="highlight centered classement-table">
+                        <thead>
+                            <tr>
+                                <th>Instance</th>
+                                <th class="separator">|</th>
+                                <th>Équipe</th>
+                                <th class="separator">|</th>
+                                <th>Score</th>
+                                <th class="separator">|</th>
+                                <th class="col-reference">Solution de référence</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for ligne in classement_global %}
+                                <tr>
+                                    <td><strong>{{ ligne.instance }}</strong></td>
+                                    <td class="separator">|</td>
+                                    <td>{{ ligne.equipe }}</td>
+                                    <td class="separator">|</td>
+                                    <td><strong>{{ ligne.score }}</strong></td>
+                                    <td class="separator">|</td>
+                                    <td class="col-reference">{{ ligne.score_reference }}</td>
+                                </tr>
+                            {% empty %}
+                                <tr>
+                                    <td colspan="7">Aucune donnée disponible</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

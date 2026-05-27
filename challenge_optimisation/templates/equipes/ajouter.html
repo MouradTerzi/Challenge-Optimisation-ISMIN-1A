@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+
+{% block title %}Ajouter une équipe{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col s12 m8 offset-m2">
+
+        <h4 class="blue-text text-darken-3 center-align" style="margin-bottom: 30px;">
+            <i class="material-icons medium">group_add</i><br>
+            Ajouter une équipe
+        </h4>
+
+        <div class="card">
+            <div class="card-content">
+                <form method="POST">
+                    {% csrf_token %}
+
+                    <!-- Nom de l'équipe -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">star</i>
+                            <input type="text" name="nom_equipe" id="nom_equipe"
+                                value="{{ form.nom_equipe.value|default:'' }}"
+                                class="{% if form.nom_equipe.errors %}invalid{% endif %}">
+                            <label for="nom_equipe" class="active">Nom de l'équipe</label>
+                            {% if form.nom_equipe.errors %}
+                            <span class="helper-text red-text">
+                                {{ form.nom_equipe.errors.0 }}
+                            </span>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- Nombre d'étudiants -->
+                    <div class="row">
+                        <div class="col s12" style="margin-bottom: 20px;">
+                            <label class="grey-text text-darken-1">
+                                <i class="material-icons tiny">people</i>
+                                Nombre d'étudiants
+                            </label>
+                            <select name="nb_etudiants" id="nb_etudiants" class="browser-default" style="margin-top: 8px; padding: 8px;
+                                           border-radius: 4px; width: 100%;
+                                           border: 1px solid #9e9e9e;
+                                           background-color: white;">
+                             
+
+                                <option value="1" {% if nb_etudiants == '1' %}selected{% endif %}>
+                                    
+                                1 étudiant
+                                </option>
+                                <option value="2" {% if nb_etudiants == '2' %}selected{% endif %}>
+                                2 étudiants
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Etudiant 1 -->
+                    <div class="card-panel blue lighten-5" style="border-radius: 8px;">
+                        <p class="blue-text text-darken-3" style="margin: 0 0 10px 0;">
+                            <i class="material-icons tiny">person</i>
+                            <strong> Étudiant 1</strong>
+                        </p>
+                        <div class="row" style="margin-bottom: 0;">
+                            <div class="input-field col s6">
+                                <input type="text" name="nom1" id="nom1" value="{{ form.nom1.value|default:'' }}"
+                                    class="{% if form.nom1.errors %}invalid{% endif %}">
+                                <label for="nom1" class="active">Nom</label>
+                                {% if form.nom1.errors %}
+                                <span class="helper-text red-text">
+                                    {{ form.nom1.errors.0 }}
+                                </span>
+                                {% endif %}
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" name="prenom1" id="prenom1"
+                                    value="{{ form.prenom1.value|default:'' }}"
+                                    class="{% if form.prenom1.errors %}invalid{% endif %}">
+                                <label for="prenom1" class="active">Prénom</label>
+                                {% if form.prenom1.errors %}
+                                <span class="helper-text red-text">
+                                    {{ form.prenom1.errors.0 }}
+                                </span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Etudiant 2 -->
+                    <div id="bloc_etudiant2" class="card-panel blue lighten-5"
+                        style="border-radius: 8px; margin-top: 15px;" {% if nb_etudiants != '2' %}hidden{% endif %}>
+                        <p class="blue-text text-darken-3" style="margin: 0 0 10px 0;">
+                            <i class="material-icons tiny">person</i>
+                            <strong> Étudiant 2</strong>
+                        </p>
+                        <div class="row" style="margin-bottom: 0;">
+                            <div class="input-field col s6">
+                                <input type="text" name="nom2" id="nom2" value="{{ form.nom2.value|default:'' }}"
+                                    class="{% if form.nom2.errors %}invalid{% endif %}">
+                                <label for="nom2" class="active">Nom</label>
+                                {% if form.nom2.errors %}
+                                <span class="helper-text red-text">
+                                    {{ form.nom2.errors.0 }}
+                                </span>
+                                {% endif %}
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" name="prenom2" id="prenom2"
+                                    value="{{ form.prenom2.value|default:'' }}"
+                                    class="{% if form.prenom2.errors %}invalid{% endif %}">
+                                <label for="prenom2" class="active">Prénom</label>
+                                {% if form.prenom2.errors %}
+                                <span class="helper-text red-text">
+                                    {{ form.prenom2.errors.0 }}
+                                </span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bouton -->
+                    <div class="center-align" style="margin-top: 30px;">
+                        <button type="submit" class="btn-large blue darken-3 waves-effect waves-light">
+                            <i class="material-icons left">save</i>
+                            Ajouter l'équipe
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.getElementById('nb_etudiants').addEventListener('change', function () {
+        const bloc = document.getElementById('bloc_etudiant2');
+        bloc.style.display = (this.value === '2') ? 'block' : 'none';
+    });
+</script>
+{% endblock %}

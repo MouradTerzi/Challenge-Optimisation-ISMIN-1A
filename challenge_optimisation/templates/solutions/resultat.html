@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+
+{% block title %}Résultat - Challenge Optimisation 2026{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col s12 m10 offset-m1">
+
+        <h4 class="blue-text text-darken-3 center-align" style="margin-bottom: 30px;">
+            <i class="material-icons medium">assignment_turned_in</i><br>
+            Résultats de la vérification
+        </h4>
+
+        {% if resultats %}
+            {% for nom_fichier, res in resultats.items %}
+
+                <!-- ===== CARD ERREUR ===== -->
+                {% if res.statut == 'erreur' %}
+                <div class="card red lighten-4"
+                     style="border-radius: 8px; margin-bottom: 20px;">
+                    <div class="card-content">
+
+                        <!-- En-tête de la card -->
+                        <h6 class="red-text text-darken-2">
+                            <i class="material-icons tiny">description</i>
+                            <strong>{{ nom_fichier }}</strong>
+                        </h6>
+
+                        <div class="divider" style="margin: 10px 0;"></div>
+
+                        <!-- Equipe -->
+                        <p>
+                            <i class="material-icons tiny">group</i>
+                            <strong>Équipe :</strong>
+                            {% if res.equipe %}
+                                {{ res.equipe }}
+                            {% else %}
+                                Inconnue
+                            {% endif %}
+                        </p>
+
+                        <!-- Instance -->
+                        <p>
+                            <i class="material-icons tiny">assignment</i>
+                            <strong>Instance :</strong>
+                            {% if res.instance %}
+                                {{ res.instance }}
+                            {% else %}
+                                Inconnue
+                            {% endif %}
+                        </p>
+
+                        <!-- Statut -->
+                        <p>
+                            <i class="material-icons tiny">cancel</i>
+                            <strong>Statut :</strong>
+                            <span class="red-text text-darken-2">Erreur</span>
+                        </p>
+
+                        <!-- Messages d'erreur -->
+                        <div class="card-panel red lighten-5"
+                             style="border-radius: 4px; font-family: monospace;">
+                            <p class="red-text text-darken-2">
+                                <strong>Messages :</strong>
+                            </p>
+                            {% for message in res.messages %}
+                                <p style="margin: 4px 0;">{{ message }}</p>
+                            {% endfor %}
+                        </div>
+
+                    </div>
+                </div>
+                {% endif %}
+
+                <!-- ===== CARD SUCCÈS ===== -->
+                {% if res.statut == 'ok' %}
+                <div class="card green lighten-4"
+                     style="border-radius: 8px; margin-bottom: 20px;">
+                    <div class="card-content">
+
+                        <!-- En-tête de la card -->
+                        <h6 class="green-text text-darken-2">
+                            <i class="material-icons tiny">description</i>
+                            <strong>{{ nom_fichier }}</strong>
+                        </h6>
+
+                        <div class="divider" style="margin: 10px 0;"></div>
+
+                        <!-- Equipe -->
+                        <p>
+                            <i class="material-icons tiny">group</i>
+                            <strong>Équipe :</strong>
+                            {{ res.equipe }}
+                        </p>
+
+                        <!-- Instance -->
+                        <p>
+                            <i class="material-icons tiny">assignment</i>
+                            <strong>Instance :</strong>
+                            {{ res.instance }}
+                        </p>
+
+                        <!-- Statut -->
+                        <p>
+                            <i class="material-icons tiny">check_circle</i>
+                            <strong>Statut :</strong>
+                            <span class="green-text text-darken-2">Succès</span>
+                        </p>
+
+                        <!-- Score -->
+                        <p>
+                            <i class="material-icons tiny">star</i>
+                            <strong>Score de la solution :</strong>
+                            <span class="green-text text-darken-2">
+                                {{ res.score|floatformat:1 }}
+                            </span>
+                        </p>
+
+                        <!-- Score amélioré -->
+                        <p>
+                            <i class="material-icons tiny">trending_up</i>
+                            <strong>Amélioration :</strong>
+                            {{ res.score_amélioré }}
+                        </p>
+
+                        <!-- Meilleur score -->
+                        <p>
+                            <i class="material-icons tiny">emoji_events</i>
+                            <strong>Ancien meilleur score de l'équipe {{res.equipe}} sur l'instance {{res.instance}} :</strong>
+                            <span class="green-text text-darken-2">
+                                {{ res.ancien_meilleur_score|floatformat:1 }}
+                            </span>
+                        </p>
+
+                        <!-- Meilleur score -->
+                        <p>
+                            <i class="material-icons tiny">emoji_events</i>
+                            <strong>Nouveau meilleur score de l'équipe {{res.equipe}} sur l'instance {{res.instance}} :</strong>
+                            <span class="green-text text-darken-2">
+                                {{ res.nouveau_meilleur_score|floatformat:1 }}
+                            </span>
+                        </p>
+
+                    </div>
+                </div>
+                {% endif %}
+
+            {% endfor %}
+
+        {% else %}
+            <div class="card-panel orange lighten-4">
+                <p class="center-align">Aucun résultat disponible.</p>
+            </div>
+        {% endif %}
+
+        <!-- Boutons retour -->
+        <div class="center-align" style="margin-top: 30px;">
+            <a href="/solutions/soumettre/"
+               class="btn blue darken-3 waves-effect waves-light"
+               style="margin: 10px;">
+                <i class="material-icons left">upload_file</i>
+                Soumettre d'autres solutions
+            </a>
+            <a href="/"
+               class="btn grey waves-effect waves-light"
+               style="margin: 10px;">
+                <i class="material-icons left">home</i>
+                Accueil
+            </a>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

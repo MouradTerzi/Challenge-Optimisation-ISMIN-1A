@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Accueil - Challenge Optimisation 2026{% endblock %}
+
+{% block content %}
+<div class="row valign-wrapper" style="margin-top: 40px;">
+
+    <!-- Texte à gauche -->
+    <div class="col s12 m6">
+        <h2 class="blue-text text-darken-3" style="font-weight: bold;">
+            Challenge<br>Optimisation<br>2026
+        </h2>
+        <p class="grey-text text-darken-1" style="font-size: 1.2rem;">
+            Bienvenue sur la plateforme officielle du challenge.
+            Inscrivez votre équipe, soumettez vos solutions et suivez le classement en temps réel !
+        </p>
+        <a href="/equipes/ajouter/" class="btn-large blue darken-3 waves-effect waves-light" style="margin-top: 15px;">
+            <i class="material-icons left">group_add</i>
+            Inscrire votre équipe
+        </a>
+    </div>
+
+    <!-- Image à droite -->
+    <div class="col s12 m6 center-align">
+        <img src="{% static 'images/challenge.png' %}" alt="Challenge Optimisation"
+            style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+    </div>
+
+</div>
+{% endblock %}

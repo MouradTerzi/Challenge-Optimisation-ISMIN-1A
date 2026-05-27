@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block title %}Soumettre une solution{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col s12 m8 offset-m2">
+
+        <!-- Titre -->
+        <h4 class="blue-text text-darken-3 center-align" style="margin-bottom: 30px;">
+            <i class="material-icons medium">upload_file</i><br>
+            Soumettre une solution
+        </h4>
+
+        <!-- Erreurs entête -->
+        {% if resultat %}
+            {% if resultat.statut == 'erreur_entete' %}
+                <div class="card red lighten-4" style="border-radius: 8px;">
+                    <div class="card-content">
+                        <p class="red-text text-darken-2">
+                            <i class="material-icons tiny">error</i>
+                            <strong>Erreurs détectées :</strong>
+                        </p>
+                        {% for message in resultat.messages %}
+                            <p class="red-text">{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+        {% endif %}
+
+        <div class="card">
+            <div class="card-content">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    <!-- Fichiers solution -->
+                    <div class="row">
+                        <div class="col s12">
+                            <label class="grey-text text-darken-1">
+                                <i class="material-icons tiny">description</i>
+                                Fichier(s) solution (.txt)
+                            </label>
+                            <div class="file-field input-field" style="margin-top: 8px;">
+                                <div class="btn blue darken-3">
+                                    <span>
+                                        <i class="material-icons left">attach_file</i>
+                                        Choisir
+                                    </span>
+                                    <!-- multiple permet de sélectionner plusieurs fichiers -->
+                                    <input type="file"
+                                           name="fichiers"
+                                           accept=".txt"
+                                           multiple>
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate"
+                                           type="text"
+                                           placeholder="Sélectionner un ou plusieurs fichiers .txt">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bouton Soumettre -->
+                    <div class="center-align" style="margin-top: 30px;">
+                        <button type="submit"
+                                class="btn-large blue darken-3 waves-effect waves-light">
+                            <i class="material-icons left">send</i>
+                            Soumettre la solution
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

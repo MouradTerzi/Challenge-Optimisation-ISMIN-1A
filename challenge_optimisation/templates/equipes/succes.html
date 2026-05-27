@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Équipe ajoutée{% endblock %}
+
+{% block content %}
+<div class="row" style="margin-top: 60px;">
+    <div class="col s12 m6 offset-m3 center-align">
+        <div class="card green lighten-4">
+            <div class="card-content">
+                <i class="material-icons large green-text">check_circle</i>
+                <h5 class="green-text text-darken-2">Équipe ajoutée avec succès !</h5>
+                <p>L'équipe <strong>{{ nom }}</strong> a bien été enregistrée.</p>
+                <!--a href="/equipes/ajouter/" class="btn green waves-effect waves-light" style="margin: 10px;">
+                    <i class="material-icons left">group_add</i>
+                    Ajouter une autre équipe
+                </a>-->
+                <a href="/" class="btn blue darken-3 waves-effect waves-light" style="margin: 10px;">
+                    <i class="material-icons left">home</i>
+                    Accueil
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
