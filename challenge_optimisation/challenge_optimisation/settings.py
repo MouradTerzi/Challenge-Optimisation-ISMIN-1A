@@ -27,6 +27,10 @@ MEDIA_URL = '/media/'
 # ← pour les fichiers uploadés (solutions)
 MEDIA_ROOT = BASE_DIR / 'media'
 
+FIXTURE_DIRS = [
+    BASE_DIR / 'fixtures',
+]
+
 CHECKER_PATH = os.path.join(BASE_DIR, 'checker', 'ChallengeOptimisation2026')
 
 
@@ -90,7 +94,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'challenge_optimisation.wsgi.application'
 
-
 DATABASES = {
     'default': dj_database_url.config(
         default=os.environ.get('DATABASE_URL')
@@ -108,7 +111,6 @@ DATABASES = {
     }
 }
 """
-
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators

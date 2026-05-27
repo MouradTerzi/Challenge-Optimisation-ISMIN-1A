@@ -1,0 +1,1253 @@
+[
+{
+  "model": "equipes.equipe",
+  "pk": 85,
+  "fields": {
+    "nom": "Solution de référence",
+    "date_creation": "2026-05-22T12:25:37.767Z"
+  }
+},
+{
+  "model": "equipes.equipe",
+  "pk": 86,
+  "fields": {
+    "nom": "SFL1",
+    "date_creation": "2026-05-22T12:37:34.303Z"
+  }
+},
+{
+  "model": "equipes.equipe",
+  "pk": 87,
+  "fields": {
+    "nom": "SFL2",
+    "date_creation": "2026-05-22T13:06:07.462Z"
+  }
+},
+{
+  "model": "equipes.equipe",
+  "pk": 88,
+  "fields": {
+    "nom": "SFL3",
+    "date_creation": "2026-05-22T13:10:47.814Z"
+  }
+},
+{
+  "model": "equipes.equipe",
+  "pk": 89,
+  "fields": {
+    "nom": "SFL4",
+    "date_creation": "2026-05-22T13:12:32.930Z"
+  }
+},
+{
+  "model": "equipes.equipe",
+  "pk": 90,
+  "fields": {
+    "nom": "ISMIN 1A",
+    "date_creation": "2026-05-22T13:14:07.855Z"
+  }
+},
+{
+  "model": "equipes.etudiant",
+  "pk": 97,
+  "fields": {
+    "equipe": 85,
+    "nom": "Feillet",
+    "prenom": "Dominique"
+  }
+},
+{
+  "model": "equipes.etudiant",
+  "pk": 98,
+  "fields": {
+    "equipe": 86,
+    "nom": "Terzi",
+    "prenom": "Mourad"
+  }
+},
+{
+  "model": "equipes.etudiant",
+  "pk": 99,
+  "fields": {
+    "equipe": 87,
+    "nom": "Absi",
+    "prenom": "Nabil"
+  }
+},
+{
+  "model": "equipes.etudiant",
+  "pk": 100,
+  "fields": {
+    "equipe": 88,
+    "nom": "Suzanne",
+    "prenom": "Elodie"
+  }
+},
+{
+  "model": "equipes.etudiant",
+  "pk": 101,
+  "fields": {
+    "equipe": 88,
+    "nom": "Uny",
+    "prenom": "Pierre"
+  }
+},
+{
+  "model": "equipes.etudiant",
+  "pk": 102,
+  "fields": {
+    "equipe": 89,
+    "nom": "Dauzère-Pérès",
+    "prenom": "Stéphane"
+  }
+},
+{
+  "model": "equipes.etudiant",
+  "pk": 103,
+  "fields": {
+    "equipe": 90,
+    "nom": "Nom Étudiant 1",
+    "prenom": "Prénom Étudiant 1"
+  }
+},
+{
+  "model": "solutions.instance",
+  "pk": 1,
+  "fields": {
+    "nom": "INSTANCE 1",
+    "numero": 1,
+    "description": "INSTANCE 1 du challenge optimisation ISMIN 1A 2026",
+    "date_ajout": "2026-05-22T12:00:14.019Z"
+  }
+},
+{
+  "model": "solutions.instance",
+  "pk": 2,
+  "fields": {
+    "nom": "INSTANCE 2",
+    "numero": 2,
+    "description": "INSTANCE 2 du challenge optimisation ISMIN 1A 2026",
+    "date_ajout": "2026-05-22T12:00:14.019Z"
+  }
+},
+{
+  "model": "solutions.instance",
+  "pk": 3,
+  "fields": {
+    "nom": "INSTANCE 3",
+    "numero": 3,
+    "description": "INSTANCE 3 du challenge optimisation ISMIN 1A 2026",
+    "date_ajout": "2026-05-22T12:00:14.019Z"
+  }
+},
+{
+  "model": "solutions.instance",
+  "pk": 4,
+  "fields": {
+    "nom": "INSTANCE 4",
+    "numero": 4,
+    "description": "INSTANCE 4 du challenge optimisation ISMIN 1A 2026",
+    "date_ajout": "2026-05-22T12:00:14.019Z"
+  }
+},
+{
+  "model": "solutions.instance",
+  "pk": 5,
+  "fields": {
+    "nom": "INSTANCE 5",
+    "numero": 5,
+    "description": "INSTANCE 5 du challenge optimisation ISMIN 1A 2026",
+    "date_ajout": "2026-05-22T12:00:14.019Z"
+  }
+},
+{
+  "model": "solutions.instance",
+  "pk": 6,
+  "fields": {
+    "nom": "INSTANCE 6",
+    "numero": 6,
+    "description": "INSTANCE 6 du challenge optimisation ISMIN 1A 2026",
+    "date_ajout": "2026-05-22T12:00:14.019Z"
+  }
+},
+{
+  "model": "solutions.instance",
+  "pk": 7,
+  "fields": {
+    "nom": "INSTANCE 7",
+    "numero": 7,
+    "description": "INSTANCE 7 du challenge optimisation ISMIN 1A 2026",
+    "date_ajout": "2026-05-22T12:00:14.019Z"
+  }
+},
+{
+  "model": "solutions.instance",
+  "pk": 8,
+  "fields": {
+    "nom": "INSTANCE 8",
+    "numero": 8,
+    "description": "INSTANCE 8 du challenge optimisation ISMIN 1A 2026",
+    "date_ajout": "2026-05-22T12:00:14.019Z"
+  }
+},
+{
+  "model": "solutions.instance",
+  "pk": 9,
+  "fields": {
+    "nom": "INSTANCE 9",
+    "numero": 9,
+    "description": "INSTANCE 9 du challenge optimisation ISMIN 1A 2026",
+    "date_ajout": "2026-05-22T12:00:14.019Z"
+  }
+},
+{
+  "model": "solutions.instance",
+  "pk": 10,
+  "fields": {
+    "nom": "INSTANCE 10",
+    "numero": 10,
+    "description": "INSTANCE 10 du challenge optimisation ISMIN 1A 2026",
+    "date_ajout": "2026-05-22T12:00:14.019Z"
+  }
+},
+{
+  "model": "solutions.instance",
+  "pk": 11,
+  "fields": {
+    "nom": "INSTANCE 11",
+    "numero": 11,
+    "description": "INSTANCE 11 du challenge optimisation ISMIN 1A 2026",
+    "date_ajout": "2026-05-22T12:00:14.019Z"
+  }
+},
+{
+  "model": "solutions.instance",
+  "pk": 12,
+  "fields": {
+    "nom": "INSTANCE 12",
+    "numero": 12,
+    "description": "INSTANCE 12 du challenge optimisation ISMIN 1A 2026",
+    "date_ajout": "2026-05-22T12:00:14.019Z"
+  }
+},
+{
+  "model": "solutions.instance",
+  "pk": 13,
+  "fields": {
+    "nom": "INSTANCE 13",
+    "numero": 13,
+    "description": "INSTANCE 13 du challenge optimisation ISMIN 1A 2026",
+    "date_ajout": "2026-05-22T12:00:14.019Z"
+  }
+},
+{
+  "model": "solutions.instance",
+  "pk": 14,
+  "fields": {
+    "nom": "INSTANCE 14",
+    "numero": 14,
+    "description": "INSTANCE 14 du challenge optimisation ISMIN 1A 2026",
+    "date_ajout": "2026-05-22T12:00:14.019Z"
+  }
+},
+{
+  "model": "solutions.instance",
+  "pk": 15,
+  "fields": {
+    "nom": "INSTANCE 15",
+    "numero": 15,
+    "description": "INSTANCE 15 du challenge optimisation ISMIN 1A 2026",
+    "date_ajout": "2026-05-22T12:00:14.019Z"
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 315,
+  "fields": {
+    "equipe": 85,
+    "instance": 1,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:31:42.347Z",
+    "score": 2515.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 316,
+  "fields": {
+    "equipe": 85,
+    "instance": 2,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:31:42.347Z",
+    "score": 1910.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 317,
+  "fields": {
+    "equipe": 85,
+    "instance": 3,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:31:42.347Z",
+    "score": 2614.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 318,
+  "fields": {
+    "equipe": 85,
+    "instance": 4,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:31:42.347Z",
+    "score": 2717.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 319,
+  "fields": {
+    "equipe": 85,
+    "instance": 5,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:31:42.347Z",
+    "score": 2363.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 320,
+  "fields": {
+    "equipe": 85,
+    "instance": 6,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:31:42.347Z",
+    "score": 2721.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 321,
+  "fields": {
+    "equipe": 85,
+    "instance": 7,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:31:42.347Z",
+    "score": 2114.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 322,
+  "fields": {
+    "equipe": 85,
+    "instance": 8,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:31:42.347Z",
+    "score": 2505.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 323,
+  "fields": {
+    "equipe": 85,
+    "instance": 9,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:31:42.347Z",
+    "score": 2191.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 324,
+  "fields": {
+    "equipe": 85,
+    "instance": 10,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:31:42.347Z",
+    "score": 2301.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 325,
+  "fields": {
+    "equipe": 85,
+    "instance": 11,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:31:42.347Z",
+    "score": 2491.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 326,
+  "fields": {
+    "equipe": 85,
+    "instance": 12,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:31:42.347Z",
+    "score": 2148.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 327,
+  "fields": {
+    "equipe": 85,
+    "instance": 13,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:31:42.347Z",
+    "score": 2511.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 328,
+  "fields": {
+    "equipe": 85,
+    "instance": 14,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:31:42.347Z",
+    "score": 2288.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 329,
+  "fields": {
+    "equipe": 85,
+    "instance": 15,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:31:42.347Z",
+    "score": 1542.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 330,
+  "fields": {
+    "equipe": 86,
+    "instance": 1,
+    "fichier": "solutions/EQUIPE_SFL1_INSTANCE_1.txt",
+    "date_soumission": "2026-05-22T12:37:34.316Z",
+    "score": 2515.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 331,
+  "fields": {
+    "equipe": 86,
+    "instance": 2,
+    "fichier": "solutions/EQUIPE_SFL1_INSTANCE_2.txt",
+    "date_soumission": "2026-05-22T12:37:34.316Z",
+    "score": 1910.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 332,
+  "fields": {
+    "equipe": 86,
+    "instance": 3,
+    "fichier": "solutions/EQUIPE_SFL1_INSTANCE_3.txt",
+    "date_soumission": "2026-05-22T12:37:34.316Z",
+    "score": 2614.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 333,
+  "fields": {
+    "equipe": 86,
+    "instance": 4,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:37:34.316Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 334,
+  "fields": {
+    "equipe": 86,
+    "instance": 5,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:37:34.316Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 335,
+  "fields": {
+    "equipe": 86,
+    "instance": 6,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:37:34.316Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 336,
+  "fields": {
+    "equipe": 86,
+    "instance": 7,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:37:34.316Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 337,
+  "fields": {
+    "equipe": 86,
+    "instance": 8,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:37:34.316Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 338,
+  "fields": {
+    "equipe": 86,
+    "instance": 9,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:37:34.316Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 339,
+  "fields": {
+    "equipe": 86,
+    "instance": 10,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:37:34.316Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 340,
+  "fields": {
+    "equipe": 86,
+    "instance": 11,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:37:34.316Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 341,
+  "fields": {
+    "equipe": 86,
+    "instance": 12,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:37:34.316Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 342,
+  "fields": {
+    "equipe": 86,
+    "instance": 13,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:37:34.316Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 343,
+  "fields": {
+    "equipe": 86,
+    "instance": 14,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:37:34.316Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 344,
+  "fields": {
+    "equipe": 86,
+    "instance": 15,
+    "fichier": "",
+    "date_soumission": "2026-05-22T12:37:34.316Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 345,
+  "fields": {
+    "equipe": 87,
+    "instance": 1,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:06:07.481Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 346,
+  "fields": {
+    "equipe": 87,
+    "instance": 2,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:06:07.481Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 347,
+  "fields": {
+    "equipe": 87,
+    "instance": 3,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:06:07.481Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 348,
+  "fields": {
+    "equipe": 87,
+    "instance": 4,
+    "fichier": "solutions/EQUIPE_SFL2_INSTANCE_4.txt",
+    "date_soumission": "2026-05-22T13:06:07.481Z",
+    "score": 2717.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 349,
+  "fields": {
+    "equipe": 87,
+    "instance": 5,
+    "fichier": "solutions/EQUIPE_SFL2_INSTANCE_5.txt",
+    "date_soumission": "2026-05-22T13:06:07.481Z",
+    "score": 2363.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 350,
+  "fields": {
+    "equipe": 87,
+    "instance": 6,
+    "fichier": "solutions/EQUIPE_SFL2_INSTANCE_6.txt",
+    "date_soumission": "2026-05-22T13:06:07.481Z",
+    "score": 2721.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 351,
+  "fields": {
+    "equipe": 87,
+    "instance": 7,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:06:07.481Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 352,
+  "fields": {
+    "equipe": 87,
+    "instance": 8,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:06:07.481Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 353,
+  "fields": {
+    "equipe": 87,
+    "instance": 9,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:06:07.481Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 354,
+  "fields": {
+    "equipe": 87,
+    "instance": 10,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:06:07.481Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 355,
+  "fields": {
+    "equipe": 87,
+    "instance": 11,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:06:07.481Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 356,
+  "fields": {
+    "equipe": 87,
+    "instance": 12,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:06:07.481Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 357,
+  "fields": {
+    "equipe": 87,
+    "instance": 13,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:06:07.481Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 358,
+  "fields": {
+    "equipe": 87,
+    "instance": 14,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:06:07.481Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 359,
+  "fields": {
+    "equipe": 87,
+    "instance": 15,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:06:07.481Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 360,
+  "fields": {
+    "equipe": 88,
+    "instance": 1,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:10:47.832Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 361,
+  "fields": {
+    "equipe": 88,
+    "instance": 2,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:10:47.832Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 362,
+  "fields": {
+    "equipe": 88,
+    "instance": 3,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:10:47.832Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 363,
+  "fields": {
+    "equipe": 88,
+    "instance": 4,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:10:47.832Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 364,
+  "fields": {
+    "equipe": 88,
+    "instance": 5,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:10:47.832Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 365,
+  "fields": {
+    "equipe": 88,
+    "instance": 6,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:10:47.832Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 366,
+  "fields": {
+    "equipe": 88,
+    "instance": 7,
+    "fichier": "solutions/EQUIPE_SFL3_INSTANCE_7.txt",
+    "date_soumission": "2026-05-22T13:10:47.832Z",
+    "score": 2114.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 367,
+  "fields": {
+    "equipe": 88,
+    "instance": 8,
+    "fichier": "solutions/EQUIPE_SFL3_INSTANCE_8.txt",
+    "date_soumission": "2026-05-22T13:10:47.832Z",
+    "score": 2505.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 368,
+  "fields": {
+    "equipe": 88,
+    "instance": 9,
+    "fichier": "solutions/EQUIPE_SFL3_INSTANCE_9.txt",
+    "date_soumission": "2026-05-22T13:10:47.832Z",
+    "score": 2191.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 369,
+  "fields": {
+    "equipe": 88,
+    "instance": 10,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:10:47.832Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 370,
+  "fields": {
+    "equipe": 88,
+    "instance": 11,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:10:47.832Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 371,
+  "fields": {
+    "equipe": 88,
+    "instance": 12,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:10:47.832Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 372,
+  "fields": {
+    "equipe": 88,
+    "instance": 13,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:10:47.832Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 373,
+  "fields": {
+    "equipe": 88,
+    "instance": 14,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:10:47.832Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 374,
+  "fields": {
+    "equipe": 88,
+    "instance": 15,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:10:47.832Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 375,
+  "fields": {
+    "equipe": 89,
+    "instance": 1,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:12:32.947Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 376,
+  "fields": {
+    "equipe": 89,
+    "instance": 2,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:12:32.947Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 377,
+  "fields": {
+    "equipe": 89,
+    "instance": 3,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:12:32.947Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 378,
+  "fields": {
+    "equipe": 89,
+    "instance": 4,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:12:32.947Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 379,
+  "fields": {
+    "equipe": 89,
+    "instance": 5,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:12:32.947Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 380,
+  "fields": {
+    "equipe": 89,
+    "instance": 6,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:12:32.947Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 381,
+  "fields": {
+    "equipe": 89,
+    "instance": 7,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:12:32.947Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 382,
+  "fields": {
+    "equipe": 89,
+    "instance": 8,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:12:32.947Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 383,
+  "fields": {
+    "equipe": 89,
+    "instance": 9,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:12:32.947Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 384,
+  "fields": {
+    "equipe": 89,
+    "instance": 10,
+    "fichier": "solutions/EQUIPE_SFL4_INSTANCE_10.txt",
+    "date_soumission": "2026-05-22T13:12:32.947Z",
+    "score": 2301.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 385,
+  "fields": {
+    "equipe": 89,
+    "instance": 11,
+    "fichier": "solutions/EQUIPE_SFL4_INSTANCE_11.txt",
+    "date_soumission": "2026-05-22T13:12:32.947Z",
+    "score": 2491.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 386,
+  "fields": {
+    "equipe": 89,
+    "instance": 12,
+    "fichier": "solutions/EQUIPE_SFL4_INSTANCE_12.txt",
+    "date_soumission": "2026-05-22T13:12:32.947Z",
+    "score": 2148.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 387,
+  "fields": {
+    "equipe": 89,
+    "instance": 13,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:12:32.947Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 388,
+  "fields": {
+    "equipe": 89,
+    "instance": 14,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:12:32.947Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 389,
+  "fields": {
+    "equipe": 89,
+    "instance": 15,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:12:32.947Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 390,
+  "fields": {
+    "equipe": 90,
+    "instance": 1,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:14:07.866Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 391,
+  "fields": {
+    "equipe": 90,
+    "instance": 2,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:14:07.866Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 392,
+  "fields": {
+    "equipe": 90,
+    "instance": 3,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:14:07.866Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 393,
+  "fields": {
+    "equipe": 90,
+    "instance": 4,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:14:07.866Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 394,
+  "fields": {
+    "equipe": 90,
+    "instance": 5,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:14:07.866Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 395,
+  "fields": {
+    "equipe": 90,
+    "instance": 6,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:14:07.866Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 396,
+  "fields": {
+    "equipe": 90,
+    "instance": 7,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:14:07.866Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 397,
+  "fields": {
+    "equipe": 90,
+    "instance": 8,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:14:07.866Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 398,
+  "fields": {
+    "equipe": 90,
+    "instance": 9,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:14:07.866Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 399,
+  "fields": {
+    "equipe": 90,
+    "instance": 10,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:14:07.866Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 400,
+  "fields": {
+    "equipe": 90,
+    "instance": 11,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:14:07.866Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 401,
+  "fields": {
+    "equipe": 90,
+    "instance": 12,
+    "fichier": "",
+    "date_soumission": "2026-05-22T13:14:07.866Z",
+    "score": 1e+20
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 402,
+  "fields": {
+    "equipe": 90,
+    "instance": 13,
+    "fichier": "solutions/EQUIPE_ISMIN_1A_INSTANCE_13.txt",
+    "date_soumission": "2026-05-22T13:14:07.866Z",
+    "score": 2511.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 403,
+  "fields": {
+    "equipe": 90,
+    "instance": 14,
+    "fichier": "solutions/EQUIPE_ISMIN_1A_INSTANCE_14.txt",
+    "date_soumission": "2026-05-22T13:14:07.866Z",
+    "score": 2288.0
+  }
+},
+{
+  "model": "solutions.solution",
+  "pk": 404,
+  "fields": {
+    "equipe": 90,
+    "instance": 15,
+    "fichier": "solutions/EQUIPE_ISMIN_1A_INSTANCE_15.txt",
+    "date_soumission": "2026-05-22T13:14:07.866Z",
+    "score": 1542.0
+  }
+}
+]
