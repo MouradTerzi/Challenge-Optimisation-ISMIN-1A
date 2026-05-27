@@ -153,6 +153,11 @@ def sauvegarder_fichier_temporaire(fichier):
     
 def appeler_checker(tmp_path,resultat):
     """Appelle l'exécutable checker et retourne son output."""
+    
+    print(f"tmp_path existe : {os.path.exists(tmp_path)}")
+    print(f"tmp_path : {tmp_path}")
+    print(f"CHECKER_PATH : {settings.CHECKER_PATH}")
+
     verification = subprocess.run(
         [settings.CHECKER_PATH, tmp_path],
         capture_output=True,
@@ -160,6 +165,11 @@ def appeler_checker(tmp_path,resultat):
         cwd=os.path.dirname(settings.CHECKER_PATH)
     )
     message = verification.stdout.strip()
+    
+    print(f"STDOUT: '{verification.stdout}'")
+    print(f"STDERR: '{verification.stderr}'")
+    print(f"RETURN CODE: {verification.returncode}")
+
     print(f"Message du checker :{message}")
     if "_Erreur solution non realisable" in message:
         resultat['statut'] = 'erreur'
