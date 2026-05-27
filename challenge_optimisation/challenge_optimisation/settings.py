@@ -41,7 +41,7 @@ CHECKER_PATH = os.path.join(BASE_DIR, 'checker', 'checker')
 SECRET_KEY = 'django-insecure-k1nz7%a8sn7cg4ly1z*zw0zjxxe*2q0cx#t_jd6v(mfj6i8r(-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 #ALLOWED_HOSTS = ['*']
 ALLOWED_HOSTS = ['.onrender.com']
