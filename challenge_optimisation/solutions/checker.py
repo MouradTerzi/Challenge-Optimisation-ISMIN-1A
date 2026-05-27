@@ -160,7 +160,7 @@ def appeler_checker(tmp_path,resultat):
         cwd=os.path.dirname(settings.CHECKER_PATH)
     )
     message = verification.stdout.strip()
-
+    print(f"Message du checker :{message}")
     if "_Erreur solution non realisable" in message:
         resultat['statut'] = 'erreur'
         resultat['messages'] = message.splitlines()
