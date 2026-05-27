@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+from pprint import pprint
+
 from .checker import ( 
     verifier_entete,
     sauvegarder_fichier_temporaire,
@@ -63,7 +65,7 @@ def soumettre_solution(request):
     
                     #3. Appeler le checker
                     appeler_checker(tmp_path,res)
-                    
+                    pprint(res)
                     if res['statut'] == 'ok':
                         #4. Mise à jour de la meilleure solution
                         mise_a_jour_meilleur_sol(fichier,res)
