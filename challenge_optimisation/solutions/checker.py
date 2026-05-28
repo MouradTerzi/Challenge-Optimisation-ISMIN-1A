@@ -171,7 +171,7 @@ def appeler_checker(tmp_path,resultat):
     print(f"STDERR: '{verification.stderr}'")
     print(f"RETURN CODE: {verification.returncode}")
 
-    print(f"Message du checker :{message}")
+    print(f"Le message du checker est :{message}")
     if "_Erreur solution non realisable" in message:
         resultat['statut'] = 'erreur'
         resultat['messages'] = message.splitlines()
