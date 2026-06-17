@@ -170,7 +170,7 @@ void Solution::save(int numInstance, string fichSolution) const
         for (int j = 0; j < pDat->getNodes(); j++)
             if (tree[i][j])
                 fichier << "(" << i << "," << j << ") ";
-    fichier << endl; 
+    fichier << endl;
 }
 
 void Solution::dfs(vector<int>& marque, int node) const

@@ -94,13 +94,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'challenge_optimisation.wsgi.application'
 
-
 DATABASES = {
     'default': dj_database_url.config(
         default=os.environ.get('DATABASE_URL')
     )
 }
-
 
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases

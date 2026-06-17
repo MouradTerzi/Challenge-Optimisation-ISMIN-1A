@@ -3,15 +3,13 @@
 using namespace std;
 
 
-
-
-//Lecture de l'entete du fichier solution (dï¿½jï¿½ ouvert)
+//Lecture de l'entete du fichier solution (déjà ouvert)
 // identifie team et number
 bool Checker::entete(ifstream& file)
 {
     string ligne, temp;
 
-    // Identification ï¿½quipe
+    // Identification équipe
     getline(file, ligne);
     istringstream issEquipe(ligne);
     issEquipe >> temp;
@@ -32,7 +30,7 @@ bool Checker::entete(ifstream& file)
         return false;
     }
 
-    // vï¿½rification que l'instance existe
+    // vérification que l'instance existe
     if (number < 0 || number > NBINSTANCES)
     {
         cout << "Erreur lecture numero instance (" << number <<")"<< endl;
@@ -42,7 +40,7 @@ bool Checker::entete(ifstream& file)
     return true;
 }
 
-//Vï¿½rifier la faisabilitï¿½ de la solution
+//Vérifier la faisabilité de la solution
 string Checker::check(string& fileName)
 {
     ifstream file(fileName);
@@ -56,21 +54,21 @@ string Checker::check(string& fileName)
     if (!file)
     {
         cout << "Erreur ouverture du fichier solution" << endl;
-        return "Erreur : Solution irrealisable";
+        return "Erreur : Solution irréalisable";
     }
 
     ok = entete(file);
-    if (!ok) return "Erreur : Solution irrealisable";
+    if (!ok) return "Erreur : Solution irréalisable";
 
     //cout << "INSTANCE " << number << " TEAM " << team << endl << endl;
 
-    // Ouvre l'instance et crï¿½e l'objet Data
+    // Ouvre l'instance et crée l'objet Data
     ostringstream flux;
     flux << "../media/instances/instance" << number << ".txt";
     temp = flux.str();
     MyData data(temp);
 
-    //read et check structure route (autonomie vï¿½rifiï¿½e dans sol.feasible())
+    //read et check structure route (autonomie vérifiée dans sol.feasible())
     vector<int> route;
     getline(file, ligne);
     istringstream issRoute(ligne);
@@ -78,29 +76,34 @@ string Checker::check(string& fileName)
     if (temp != "ROUTE")
     {
         cout << "Erreur absence mot cle ROUTE" << endl;
-        return "Erreur : Solution irrealisable";
+        return "Erreur : Solution irréalisable";
     }
     issRoute >> i;
     route.push_back(i);
     if (i != data.getVehicleDepot())
     {
         cout << "Erreur la route ne commence pas par le depot"<<endl;
-        return "Erreur : Solution irrealisable";
+        return "Erreur : Solution irréalisable";
     }
     while (issRoute >> i)
     {
         if (i<0 || i> data.getClients() + 1)
+        {
             cout << "Erreur la route contient un client invalide (" << i << ")" << endl;
+            return "Erreur : Solution irréalisable";
+        }
         else
+        {
             route.push_back(i);
+        }
     }
     if (route.back() != data.getVehicleDepot())
     {
         cout << "Erreur la route ne finit pas par le depot" << endl;
-        return "Erreur : Solution irrealisable";
+        return "Erreur : Solution irréalisable";
     }
 
-    //read arbre (structure de l'arbre et profondeur vï¿½rifiï¿½es dans sol.feasible())
+    //read arbre (structure de l'arbre et profondeur vérifiées dans sol.feasible())
     vector<vector<bool>> tree;
     tree.resize(data.getNodes());
     for (int i = 0; i < data.getNodes(); i++)
@@ -115,23 +118,35 @@ string Checker::check(string& fileName)
     if (temp != "ARBRE")
     {
         cout << "Erreur absence mot cle ARBRE" << endl;
-        return "Erreur : Solution irrealisable";
+        return "Erreur : Solution irréalisable";
     }
     while (issTree >> parenthese)
     {
-        if (parenthese != '(') //lit parenthï¿½se
+        if (parenthese != '(') //lit parenthèse
         {
-            cout << "Erreur au moins un arc de l'arbre mal formatte (mauvais delimiteur)";
-            return "Erreur : Solution irrealisable";
+            cout << "Erreur au moins un arc de l'arbre mal formatte (mauvais delimiteur)" <<endl;
+            return "Erreur : Solution irréalisable";
         }
         getline(issTree, node1, ','); // lit premier sommet
         getline(issTree, node2, ')'); // lit second sommet
-        i = stoi(node1);
-        j = stoi(node2);
-        if (i<0 || i> data.getClients() + 1 || j<0 || j> data.getClients() + 1)
-            cout << "Erreur l'arbre contient un arc invalide (" << i << "," << j << ")" << endl;
-        else
-            tree[i][j] = true;
+
+        try
+        {
+            i = stoi(node1);
+            j = stoi(node2);
+            if (i<0 || i> data.getClients() + 1 || j<0 || j> data.getClients() + 1)
+            {
+                cout << "Erreur l'arbre contient un arc invalide (" << i << "," << j << ")" << endl;
+                return "Erreur : Solution irréalisable";
+            }
+            else
+                tree[i][j] = true;
+        }
+        catch (const invalid_argument& e)
+        {
+            cout << "Erreur dans la lecture d'un arc de l'arbre : mauvais délimiteur ou valeur incorrecte" << endl;
+            return "Erreur : Solution irréalisable";
+        }
     }
 
     solution = Solution(data,route, tree);
@@ -143,13 +158,13 @@ string Checker::check(string& fileName)
 
     if (ok)
     {
-        //cout << "----> Solution rï¿½alisable de valeur " <<value<< endl<<endl;
+        //cout << "----> Solution realisable de valeur " << value << endl << endl;
         return to_string(value);
     }
     else
     {
-        return "Erreur : Solution irrealisable";
+        //cout << "----> Solution irrealisable" << endl << endl;
+        return "Erreur : Solution irréalisable";
     }
-
 }
 

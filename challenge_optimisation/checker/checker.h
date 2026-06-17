@@ -3,6 +3,7 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include<list>
 #include<vector>
 
 using namespace std;

@@ -4,6 +4,7 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
+#include <list>
 using namespace std;
 #include "data.h"
 
