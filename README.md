@@ -81,7 +81,10 @@ Cette commande :
     met à jour la structure de la base,
     applique les modifications des modèles Django.
 
-- python manage.py loaddata data.json -> Charge des données initiales dans la base de données à partir du fichier data.json. Le fichier data.json est généralement un fixture Django exporté avec : python manage.py dumpdata > data.json
+- python manage.py loaddata data.json -> Charge des données initiales dans la base de données à partir du fichier data.json. Le fichier data.json est généralement un fixture Django exporté avec : 
+
+python manage.py dumpdata --indent 2 > data.json ou 
+python manage.py dumpdata equipes solutions classement --indent 2 > data.json (seules les données métiers)
 
 Dans :
 challenge_optimisation/challenge_optimisation/settings.py
