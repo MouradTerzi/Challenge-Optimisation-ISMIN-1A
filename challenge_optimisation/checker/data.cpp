@@ -25,7 +25,7 @@ MyData::MyData(string f)
 			distance[i].resize(nbNodes);
 		X.resize(nbNodes);
 		Y.resize(nbNodes);
-		
+
 		dataFile >> temp>>temp>>vehicleAutonomy ;
 		dataFile >> temp >> temp >> pipelineDepth;
 
@@ -46,10 +46,18 @@ MyData::MyData(string f)
 				if (i == j)
 					distance[i][j] = INFINI;
 				else
-					distance[i][j] = abs(X[i] - X[j]) + abs(Y[i] - Y[j]); // distance de Manhattan
+					distance[i][j] = ceil(sqrt(pow(X[i] - X[j],2) + pow(Y[i] - Y[j],2)));
+		distance[0][0] = 0;
+
+		/*for (int i = 0; i < nbNodes; i++)
+			for (int j = 0; j < nbNodes; j++)
+				if (i == j)
+					distance[i][j] = INFINI;
+				else
+					distance[i][j] = abs(X[i] - X[j]) + abs(Y[i] - Y[j]); // distance de Manhattan*/
 }
 
-	void MyData::generate(int num) 
+	void MyData::generate(int num)
 	{
 		string name;
 		ostringstream flux;
@@ -58,7 +66,7 @@ MyData::MyData(string f)
 		flux << num;
 		flux << ".txt";
 		name = flux.str();
-		ofstream newFile(name); // ouvre le fichier de sortie, avec le nom name 
+		ofstream newFile(name); // ouvre le fichier de sortie, avec le nom name
 
 		newFile << "CUSTOMERS " << 100 << endl;
 		newFile << "VEHICLE AUTONOMY " << 500 << endl;
