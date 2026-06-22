@@ -14,7 +14,7 @@ Solution::Solution(const MyData& data, const vector<int>& route, const vector<ve
 
     pDat = &data;
 
-    // calcul du coût
+    // calcul du coï¿½t
     routeCost = 0;
     for (int i = 0; i < route.size() - 1; i++)
         routeCost = routeCost + data.getDistance(route[i], route[i + 1]);
@@ -39,10 +39,23 @@ ostream& operator<<(ostream& flot,const Solution& sol)
             if (sol.tree[i][j])
                 flot << "(" << i << "," << j << ") ";
     flot << endl << endl;
-    flot << " Coût total : " << sol.cost << endl<<endl;
+    flot << " Coï¿½t total : " << sol.cost << endl<<endl;
     return flot;
 }
 
+
+/*bool Solution::feasible() const
+{
+    
+
+    
+    bool feas = true;
+
+    //COUVERTURE GLOBALE
+    vector<bool> present(pDat->getNodes(), false);
+
+    for (int i = 0; i < route.size(); i++)
+        present[route[i]] = true;*/
 
 bool Solution::feasible() const
 {
@@ -51,8 +64,21 @@ bool Solution::feasible() const
     //COUVERTURE GLOBALE
     vector<bool> present(pDat->getNodes(), false);
 
-    for (int i = 0; i < route.size(); i++)
-        present[route[i]] = true;
+    for (auto it = route.begin(); it != route.end(); it++)
+    {
+        if (*it == pDat->getPipelineSource())
+        {
+            cout << "Erreur racine du pipeline dans la route " << endl;
+            feas = false;
+        }
+        if (present[*it] == true && *it != pDat->getVehicleDepot()) 
+        {
+            cout << "Erreur client "<<*it<<" visitÃ© plusieurs fois dans la route " << endl;
+            feas = false;
+        }
+        present[*it] = true;
+    } 
+
     for (int i = 0; i < pDat->getNodes(); i++)
         for (int j = 0; j < pDat->getNodes(); j++)
             if (tree[i][j] == true)
@@ -69,14 +95,14 @@ bool Solution::feasible() const
 
     // ROUTE
 
-    //vérification structure route
+    //vï¿½rification structure route
     if (route.front() != pDat->getVehicleDepot() || route.back() != pDat->getVehicleDepot())
     {
         cout << "Erruer route ne demarre pas ou ne finit pas au depot" << endl;
         feas = false;
     }
 
-    //vérification autonomie route
+    //vï¿½rification autonomie route
     if (routeCost> pDat->getVehicleAutonomy())
     {
         cout << "Erreur route trop longue ("<<routeCost<<")" << endl;
@@ -99,7 +125,7 @@ bool Solution::feasible() const
                 inTree[j] = true;
             }
 
-    //vérification doublons dans tree et comptage du nombre d'arcs
+    //vï¿½rification doublons dans tree et comptage du nombre d'arcs
     for (int i = 0; i < pDat->getNodes(); i++)
         for (int j = 0; j < pDat->getNodes(); j++)
             if (tree[i][j] == true)
@@ -113,20 +139,20 @@ bool Solution::feasible() const
                     nbArcTree++;
             }
 
-    //vérification nbArc = nbNoeuds-1
+    //vï¿½rification nbArc = nbNoeuds-1
     if (nbArcTree != nbNoeudTree - 1)
     {
         cout << "Erreur pipeline n'est pas un arbre (nombre d'arcs != nombre de noeuds - 1)" << endl;
         feas = false;
     }
 
-    // vérification connexite tree et profondeur
+    // vï¿½rification connexite tree et profondeur
     vector<int> marque(pDat->getNodes(), -1);
 
     marque[pDat->getPipelineSource()] = 0;
     dfs(marque, pDat->getPipelineSource()); //parcours en profondeur depuis la source
 
-    for (int i = 0; i < pDat->getNodes(); i++) //connexité
+    for (int i = 0; i < pDat->getNodes(); i++) //connexitï¿½
         if (inTree[i] && marque[i]==-1)
         {
             cout << "Erreur de connexite de l'arbre (sommet " << i << ") " << endl;
@@ -140,7 +166,7 @@ bool Solution::feasible() const
             feas = false;
         }
 
-    // vérification que depot du véhicule n'est pas dans arbre
+    // vï¿½rification que depot du vï¿½hicule n'est pas dans arbre
     if (inTree[pDat->getVehicleDepot()])
     {
         cout << "Erreur depot vehicule dans arbre" << endl;
